@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Tayade's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .project {
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: grid;
+            gap: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, textarea {
+            padding: 8px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        #formMessage {
+            color: green;
+            margin-top: 10px;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .project a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Daniel Tayade</h1>
+        <nav>
+            <ul>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Movies Recommendation System</h3>
+            <p>This project is a movies recommendation system built using Flask. It provides personalized movie recommendations based on user preferences.</p>
+            <p><strong>Technologies Used:</strong> Flask, Python, HTML, CSS</p>
+            <p><strong>Live Demo:</strong> <a href="http://127.0.0.1:5000/" target="_blank">View Live Demo</a></p>
+            <p><strong>GitHub Repository:</strong> <a href="http://github.com/your-github-repo" target="_blank">View on GitHub</a></p>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+        <p id="formMessage"></p>
+
+        <div class="contact-info">
+            <p><strong>Phone:</strong> 8097093011</p>
+            <p><strong>Email:</strong> <a href="mailto:danieltayade2004@gmail.com">danieltayade2004@gmail.com</a></p>
+            <p><strong>Location:</strong> Thane</p>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Simple form validation
+            if (name && email && message) {
+                document.getElementById('formMessage').textContent = 'Thank you for your message!';
+                document.getElementById('contactForm').reset();
+            } else {
+                document.getElementById('formMessage').textContent = 'Please fill out all fields.';
+            }
+        });
+    </script>
+</body>
+</html>
