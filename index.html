@@ -3,32 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Tayade's Portfolio</title>
+    <title>Daniel Tayade - Professional Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Daniel Tayade</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <section class="hero">
-        <div class="container">
-            <h2>Welcome to My Professional Portfolio</h2>
-            <p>Explore my projects and get to know more about my work.</p>
+
+    <section id="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Discover my work and projects</p>
+        <a href="#about" class="btn">Learn More</a>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="content">
+            <img src="profile.jpg" alt="Profile Picture">
+            <p>Hello! I’m Daniel Tayade, a dedicated data analyst currently pursuing a TYBSc in Data Science. With a strong foundation in data analysis, I am passionate about transforming complex data into actionable insights. My expertise lies in using statistical methods and advanced techniques to uncover trends and create compelling visualizations. As a student, I am committed to continuously expanding my knowledge and skills to tackle real-world data challenges and contribute to impactful projects.</p>
         </div>
     </section>
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Daniel Tayade. All rights reserved.</p>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="project1.jpg" alt="Movie Recommendation System">
+                <h3>Movie Recommendation System</h3>
+                <p>This project is a movie recommendation system that uses a cosine similarity model and one-hot encoding in feature engineering. It recommends 10 movies related to a specific movie provided by the user, based on the genre feature.</p>
+            </div>
         </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/xovawwza" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Daniel Tayade</p>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
